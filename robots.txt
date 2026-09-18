@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://kuznetsov-derm.github.io/sitemap.xml
