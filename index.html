@@ -470,6 +470,14 @@
     color:var(--muted); text-decoration:none; font-size:20px; transform:translate(-50%,-50%); transition:color .2s,border-color .2s,background .2s,transform .2s; }
   .foot-top:hover { color:var(--link); background:rgba(37,90,151,.05); border-color:var(--link); transform:translate(-50%,calc(-50% - 2px)); }
   .foot-top:focus-visible, .foot-credit a:focus-visible { outline:3px solid var(--link); outline-offset:3px; }
+  .foot-social { display:flex; flex-wrap:wrap; align-items:center; gap:10px; margin-top:16px; }
+  .foot-social a { flex:0 0 48px; display:inline-flex; align-items:center; justify-content:center; width:48px; height:48px;
+    border:1px solid var(--line-l); border-radius:50%; color:var(--muted);
+    transition:color .24s ease, border-color .24s ease, transform .24s ease; }
+  .foot-social a:hover { color:var(--ink); border-color:var(--link); transform:translateY(-2px); }
+  .foot-social a:focus-visible { outline:3px solid var(--link); outline-offset:2px; }
+  .foot-social svg { width:20px; height:20px; }
+  .foot-note { flex:1 1 100%; margin-top:8px; font-size:11px; line-height:1.45; color:var(--muted); max-width:36ch; }
   .foot-credit { display:flex; flex-direction:column; align-items:flex-end; justify-content:center; gap:0; text-align:right; line-height:1.55; }
   .foot-credit-label { color:var(--muted); }
   .foot-credit a { display:inline-flex; flex-direction:row; align-items:center; justify-content:flex-end; gap:5px; font-family:'Montserrat',sans-serif; font-weight:800;
@@ -487,7 +495,9 @@
     .foot-top { position:static; order:-1; transform:none; margin:0; }
     .foot-top:hover { transform:translateY(-2px); }
     .foot-info { max-width:34ch; margin:0 auto; }
-    .foot-credit { align-items:center; text-align:center; margin-top:16px; }
+    .foot-social { justify-content:center; }
+      .foot-note { max-width:40ch; }
+      .foot-credit { align-items:center; text-align:center; margin-top:16px; }
     .foot-credit a { justify-content:center; }
   }
   /* планшет: две колонки остаются, но зазор под стрелку задаётся явно */
@@ -809,6 +819,15 @@ rrentColor"><path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74
       <span>© <span id="year">2026</span> Кузнецов Андрей Сергеевич</span>
       <span>Информация на сайте не является публичной офертой и не заменяет очную консультацию врача.</span>
       <span>Имеются противопоказания. Необходима консультация специалиста.</span>
+      <div class="foot-social">
+        <a href="https://t.me/frankly_dermatology" target="_blank" rel="noopener" aria-label="Telegram-канал врача">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.42.17 1.14 1.3l-2.72 12.81c-.19.89-.72 1.1-1.45.69l-4.02-2.96-1.94 1.88c-.22.22-.41.41-.81.41z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/dolphin_hero/" target="_blank" rel="noopener" aria-label="Instagram врача">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <span class="foot-note">Instagram принадлежит компании Meta, признанной экстремистской организацией и запрещённой на территории РФ</span>
+      </div>
     </div>
     <a class="foot-top" href="#top" aria-label="Наверх">↑</a>
     <div class="foot-credit">
